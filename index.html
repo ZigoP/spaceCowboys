@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <title>Title</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <nav id="navBar">
+        <img id="spaceshipLogo" src="images/logo1.png" alt="spaceshipLogo">
+        <div class="desktop">
+            <p id="nav1" class="montserratFont navElements" onclick="navClick(this.id)">ABOUT US</p>
+            <p id="nav2" class="montserratFont navElements" onclick="navClick(this.id)">THE TEAM</p>
+            <p id="nav3" class="montserratFont navElements" onclick="navClick(this.id)">IMPRESSIONS</p>
+            <p id="nav4" class="montserratFont navElements" onclick="navClick(this.id)">CONTACT</p>
+        </div>
+        <div class="mobile">
+            <button class="montserratFont dropdown" id="openMenu" onclick="menu(this.id)">Menu</button>
+            <div id="mobileNav">
+                <button class="montserratFont dropdown" id="closeMenu" onclick="menu(this.id)">x Close</button>
+                <p id="nav1m" class="montserratFont navElements" onclick="navClick(this.id)">ABOUT US</p>
+                <p id="nav2m" class="montserratFont navElements" onclick="navClick(this.id)">THE TEAM</p>
+                <p id="nav3m" class="montserratFont navElements" onclick="navClick(this.id)">IMPRESSIONS</p>
+                <p id="nav4m" class="montserratFont navElements" onclick="navClick(this.id)">CONTACT</p>
+            </div>
+        </div>
+    </nav>
+    <section id="sec1">
+        <div id="greetingDiv">
+            <p id="greeting" class="montserratFont">Hey there, we are <br>spacecowboy<br><span id="greeting2" class="montserratFont">- an independent space agency -</span></p>
+            <button id="learnMoreButton" onclick="scrollToNext()"><p id="buttonText" class="montserratFont">LEARN MORE</p></button>
+        </div>
+    </section>
+    <section id="sec2">
+        <div class="infoDiv">
+            <p class="montserratFont sectionTitle">A few facts about us</p>
+            <p class="merriweatherFont sectionText">Before you do business with us,<br> you might want to know a little bit more about our company:</p>
+        </div>
+        <div id="factsDiv">
+            <div class="factsBox">
+                <p class="montserratFont factTitle">we are cowboys</p>
+                <p class="merriweatherFont factText">You might have guessed that from our company name, but the fact is:<br>
+                    Yes, we are indeed cowboys. Cowboys who‘d like to go to space.
+                    Deal with it.</p>
+                <div class="ellipse">
+                    <img src="images/Form_1.png" alt="cowboyHat">
+                </div>
+            </div>
+            <div class="factsBox">
+                <p class="montserratFont factTitle">we like to tinker</p>
+                <p class="merriweatherFont factText">There are a lot of things lying around on a typical Cowboy Ranch. So we started putting them together,
+                    and got really good at rocket building.  </p>
+                <div class="ellipse">
+                    <img src="images/Form_5.png" alt="tools">
+                </div>
+            </div>
+            <div class="factsBox">
+                <p class="montserratFont factTitle">we explore space</p>
+                <p class="merriweatherFont factText">Once we got our first proper rocket, everything went quite fast.
+                    And now we are the #1 independent space agency in the world. Who would have guessed?</p>
+                <div class="ellipse" id="spaceEllipse">
+                    <img src="images/icon.png" alt="space">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="sec3">
+        <div class="infoDiv">
+            <p class="montserratFont sectionTitle" id="teamTitle">The team</p>
+            <p class="merriweatherFont sectionText" id="teamText">Yep, that‘s us. Six fine fellows, eager to get on the next adventure.
+                <br>Click on the pictures to get some more information!</p>
+        </div>
+        <div id="teamDiv" class="desktop">
+            <div id="card1" onclick="flipCard(this.id)" class="cards">
+                <div class="personDiv">
+                    <img src="images/face1.png" alt="Dick Harvey" class="portrait" >
+                    <div class="personData">
+                        <p class="montserratFont personName">Dick <br>Harvey</p>
+                        <p class="montserratFont personOcc">Captain</p>
+                        <p class="montserratFont personInfo">AGE: 56 <br>missions: 13</p>
+                    </div>
+                </div>
+                <div class="personQuoteDiv" style="display: none" >
+                    <p class="montserratFont quoteTitle">dick‘s famous quote:</p>
+                    <p class="merriweatherFont personQuote">„This is a small step for me,
+                        but a big step for, like,
+                        a small kid“</p>
+                </div>
+            </div>
+            <div id="card2" onclick="flipCard(this.id)" class="cards">
+                <div class="personDiv" >
+                    <img src="images/face2.png" alt="Richie Farhem" class="portrait">
+                    <div class="personData">
+                        <p class="montserratFont personName">richie <br>farhem</p>
+                        <p class="montserratFont personOcc">engineer</p>
+                        <p class="montserratFont personInfo">AGE: 48 <br>missions: 13</p>
+                    </div>
+                </div>
+                <div class="personQuoteDiv" style="display: none" >
+                    <p class="montserratFont quoteTitle">richie‘s famous quote:</p>
+                    <p class="merriweatherFont personQuote">„This is a small step for me,
+                        but a big step for, like,
+                        a small kid“</p>
+                </div>
+            </div>
+            <div id="card3" onclick="flipCard(this.id)" class="cards">
+                <div class="personDiv" >
+                    <img src="images/face3.png" alt="John Siracha" class="portrait" >
+                    <div class="personData">
+                        <p class="montserratFont personName">john <br>siracha</p>
+                        <p class="montserratFont personOcc">gunslinger</p>
+                        <p class="montserratFont personInfo">AGE: 47 <br>missions: 13</p>
+                    </div>
+                </div>
+                <div class="personQuoteDiv" style="display: none" >
+                    <p class="montserratFont quoteTitle">john‘s famous quote:</p>
+                    <p class="merriweatherFont personQuote">„This is a small step for me,
+                        but a big step for, like,
+                        a small kid“</p>
+                </div>
+            </div>
+            <div id="card4" onclick="flipCard(this.id)" class="cards">
+                <div class="personDiv">
+                    <img src="images/face4.png" alt="Bert Mcnamera" class="portrait">
+                    <div class="personData">
+                        <p class="montserratFont personName">bert <br>mcnamera</p>
+                        <p class="montserratFont personOcc">Captain</p>
+                        <p class="montserratFont personInfo">AGE: 71 <br>missions: 13</p>
+                    </div>
+                </div>
+                <div class="personQuoteDiv" style="display: none" >
+                    <p class="montserratFont quoteTitle">bert‘s famous quote:</p>
+                    <p class="merriweatherFont personQuote">„This is a small step for me,
+                        but a big step for, like,
+                        a small kid“</p>
+                </div>
+            </div>
+            <div id="card5" onclick="flipCard(this.id)" class="cards">
+                <div class="personDiv" >
+                    <img src="images/face5.png" alt="Al Sveringe" class="portrait">
+                    <div class="personData">
+                        <p class="montserratFont personName">al <br>sveringe</p>
+                        <p class="montserratFont personOcc">ceo</p>
+                        <p class="montserratFont personInfo">AGE: 76 <br>missions: 13</p>
+                    </div>
+                </div>
+                <div class="personQuoteDiv" style="display: none" >
+                    <p class="montserratFont quoteTitle">al‘s famous quote:</p>
+                    <p class="merriweatherFont personQuote">„This is a small step for me,
+                        but a big step for, like,
+                        a small kid“</p>
+                </div>
+            </div>
+        </div>
+        <div class="mobile">
+            <div class="slideshow-container">
+                <div class="mySlides ">
+                    <div id="card1m" onclick="flipCard(this.id)" class="cards">
+                        <div class="personDiv">
+                            <img src="images/face1.png" alt="Dick Harvey" class="portrait" >
+                            <div class="personData">
+                                <p class="montserratFont personName">Dick <br>Harvey</p>
+                                <p class="montserratFont personOcc">Captain</p>
+                                <p class="montserratFont personInfo">AGE: 56 <br>missions: 13</p>
+                            </div>
+                        </div>
+                        <div class="personQuoteDiv" style="display: none" >
+                            <p class="montserratFont quoteTitle">dick‘s famous quote:</p>
+                            <p class="merriweatherFont personQuote">„This is a small step for me,
+                                but a big step for, like,
+                                a small kid“</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mySlides ">
+                    <div id="card2m" onclick="flipCard(this.id)" class="cards">
+                        <div class="personDiv" >
+                            <img src="images/face2.png" alt="Richie Farhem" class="portrait">
+                            <div class="personData">
+                                <p class="montserratFont personName">richie <br>farhem</p>
+                                <p class="montserratFont personOcc">engineer</p>
+                                <p class="montserratFont personInfo">AGE: 48 <br>missions: 13</p>
+                            </div>
+                        </div>
+                        <div class="personQuoteDiv" style="display: none" >
+                            <p class="montserratFont quoteTitle">richie‘s famous quote:</p>
+                            <p class="merriweatherFont personQuote">„This is a small step for me,
+                                but a big step for, like,
+                                a small kid“</p>
+                        </div>
+                    </div>                </div>
+                <div class="mySlides ">
+                    <div id="card3m" onclick="flipCard(this.id)" class="cards">
+                        <div class="personDiv" >
+                            <img src="images/face3.png" alt="John Siracha" class="portrait" >
+                            <div class="personData">
+                                <p class="montserratFont personName">john <br>siracha</p>
+                                <p class="montserratFont personOcc">gunslinger</p>
+                                <p class="montserratFont personInfo">AGE: 47 <br>missions: 13</p>
+                            </div>
+                        </div>
+                        <div class="personQuoteDiv" style="display: none" >
+                            <p class="montserratFont quoteTitle">john‘s famous quote:</p>
+                            <p class="merriweatherFont personQuote">„This is a small step for me,
+                                but a big step for, like,
+                                a small kid“</p>
+                        </div>
+                    </div>                </div>
+                <div class="mySlides ">
+                    <div id="card4m" onclick="flipCard(this.id)" class="cards">
+                        <div class="personDiv">
+                            <img src="images/face4.png" alt="Bert Mcnamera" class="portrait">
+                            <div class="personData">
+                                <p class="montserratFont personName">bert <br>mcnamera</p>
+                                <p class="montserratFont personOcc">Captain</p>
+                                <p class="montserratFont personInfo">AGE: 71 <br>missions: 13</p>
+                            </div>
+                        </div>
+                        <div class="personQuoteDiv" style="display: none" >
+                            <p class="montserratFont quoteTitle">bert‘s famous quote:</p>
+                            <p class="merriweatherFont personQuote">„This is a small step for me,
+                                but a big step for, like,
+                                a small kid“</p>
+                        </div>
+                    </div>                </div>
+                <div class="mySlides ">
+                    <div id="card5m" onclick="flipCard(this.id)" class="cards">
+                        <div class="personDiv" >
+                            <img src="images/face5.png" alt="Al Sveringe" class="portrait">
+                            <div class="personData">
+                                <p class="montserratFont personName">al <br>sveringe</p>
+                                <p class="montserratFont personOcc">ceo</p>
+                                <p class="montserratFont personInfo">AGE: 76 <br>missions: 13</p>
+                            </div>
+                        </div>
+                        <div class="personQuoteDiv" style="display: none" >
+                            <p class="montserratFont quoteTitle">al‘s famous quote:</p>
+                            <p class="merriweatherFont personQuote">„This is a small step for me,
+                                but a big step for, like,
+                                a small kid“</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div style="text-align:center">
+                <img src="images/mobilePrev.png" alt="previous" onclick="plusSlides(-1)" class="prevMobile">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <img src="images/mobileNext.png" alt="next" onclick="plusSlides(1)" class="nextMobile">
+            </div>
+        </div>
+
+    </section>
+    <section id="sec4">
+        <div class="infoDiv">
+            <p class="montserratFont sectionTitle" id="lightboxTitle">look at all those stars!</p>
+            <p class="merriweatherFont sectionText" id="lightboxText">Some impressions from our trips to frickin outer space, enjoy!</p>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <img src="images/1.png" onclick="openLightbox();toSlide(1)" class="hover-shadow preview" alt="galaxy" />
+            </div>
+            <div class="col">
+                <img src="images/2.png" onclick="openLightbox();toSlide(2)" class="hover-shadow preview" alt="galaxy" />
+            </div>
+            <div class="col">
+                <img src="images/3.png" onclick="openLightbox();toSlide(3)" class="hover-shadow preview" alt="galaxy" />
+            </div>
+            <div class="col">
+                <img src="images/4.png" onclick="openLightbox();toSlide(4)" class="hover-shadow preview" alt="galaxy" />
+            </div>
+            <div class="col">
+                <img src="images/5.png" onclick="openLightbox();toSlide(5)" class="hover-shadow preview" alt="galaxy" />
+            </div>
+            <div class="col">
+                <img src="images/6.png" onclick="openLightbox();toSlide(6)" class="hover-shadow preview" alt="galaxy" />
+            </div>
+            <div class="col">
+                <img src="images/7.png" onclick="openLightbox();toSlide(7)" class="hover-shadow preview" alt="galaxy" />
+            </div>
+            <div class="col">
+                <img src="images/8.png" onclick="openLightbox();toSlide(8)" class="hover-shadow preview" alt="galaxy" />
+            </div>
+            <div class="col">
+                <img src="images/9.png" onclick="openLightbox();toSlide(9)" class="hover-shadow preview" alt="galaxy" />
+            </div>
+            <div class="col">
+                <img src="images/10.png" onclick="openLightbox();toSlide(10)" class="hover-shadow preview" alt="galaxy" />
+            </div>
+            <div class="col">
+                <img src="images/11.png" onclick="openLightbox();toSlide(11)" class="hover-shadow preview" alt="galaxy" />
+            </div>
+            <div class="col">
+                <img src="images/12.png" onclick="openLightbox();toSlide(12)" class="hover-shadow preview" alt="galaxy" />
+            </div>
+        </div>
+
+        <div id="Lightbox" class="modal">
+            <img src="images/close.png" alt="close" class="close pointer" onclick="closeLightbox()">
+            <div class="modal-content">
+
+                <div class="slide">
+                    <img src="images/1.png" class="image-slide" alt="galaxy" />
+                </div>
+                <div class="slide">
+                    <img src="images/2.png" class="image-slide" alt="galaxy" />
+                </div>
+                <div class="slide">
+                    <img src="images/3.png" class="image-slide" alt="galaxy" />
+                </div>
+                <div class="slide">
+                    <img src="images/4.png" class="image-slide" alt="galaxy" />
+                </div>
+                <div class="slide">
+                    <img src="images/5.png" class="image-slide" alt="galaxy" />
+                </div>
+                <div class="slide">
+                    <img src="images/6.png" class="image-slide" alt="galaxy" />
+                </div>
+                <div class="slide">
+                    <img src="images/7.png" class="image-slide" alt="galaxy" />
+                </div>
+                <div class="slide">
+                    <img src="images/8.png" class="image-slide" alt="galaxy" />
+                </div>
+                <div class="slide">
+                    <img src="images/9.png" class="image-slide" alt="galaxy" />
+                </div>
+                <div class="slide">
+                    <img src="images/10.png" class="image-slide" alt="galaxy" />
+                </div>
+                <div class="slide">
+                    <img src="images/11.png" class="image-slide" alt="galaxy" />
+                </div>
+                <div class="slide">
+                    <img src="images/12.png" class="image-slide" alt="galaxy" />
+                </div>
+
+                <img src="images/prev.png" alt="previous" class="previous" onclick="changeSlide(-1)">
+                <img src="images/next.png" alt="next" class="next" onclick="changeSlide(1)">
+                <p class="montserratFont" id="imgDesc">Well, this was amazing!</p>
+            </div>
+        </div>
+    </section>
+    <section id="sec5">
+        <div class="infoDiv">
+            <p class="montserratFont sectionTitle" >say hello</p>
+            <p class="merriweatherFont sectionText" >Got some questions about us? Wanna do business with us?<br>
+                Or do you just want to send us your latest cat-content - there you go:</p>
+        </div>
+        <form action="#">
+            <div id="formDiv">
+                <p class="montserratFont warning" id="noName">Please provide your First Name</p>
+                <input type="text" placeholder="First Name" class="inputs" onchange="validate(this.id)" id="name">
+                <p class="montserratFont warning" id="noLastName">Please provide your Last Name</p>
+                <input type="text" placeholder="Last Name" class="inputs" onchange="validate(this.id)" id="lastName">
+                <p class="montserratFont warning" id="noEmail">Please provide your email</p>
+                <p class="montserratFont warning" id="wrongEmail">Sorry, that's not a valid E-mail address</p>
+                <input type="email" placeholder="Email" class="inputs" onchange="validate(this.id)" id="email">
+                <textarea id="messageInput" placeholder="Your Message" class="inputs"></textarea>
+            </div>
+            <input type="submit" value="SEND THAT MAIL" id="submitInput" class="montserratFont">
+        </form>
+    </section>
+    <footer>
+        <p class="montserratFont" id="copyright">Copyright © 2015</p>
+        <p class="montserratFont" id="footerText">SPACE        <span><img src="images/Logo.png" alt="spaceshipLogo" id="footerLogo"></span>        COWBOY</p>
+    </footer>
+</body>
+<script src="script.js"></script>
+
+</html>
