@@ -7,21 +7,24 @@
     vertical-align: baseline;
     background: transparent;
 }
-html{
-    max-width: 1600px;
-}
 
 body{
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    max-width: 1600px;
+    width: 100%;
 }
 
+.mobile{
+    display: none;
+}
+.desktop{
+    display: block;
+}
 
 #spaceshipLogo{
     position: fixed;
-    left: 215px;
+    left: 5%;
     top: 10px;
     width: 35px;
     height: 35px;
@@ -59,50 +62,39 @@ body{
 .navElements:hover{
     transform: scale(1.2);
 }
+.navWrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    column-gap: 30px;
+    padding: 17.5px 5% 0 0;
+}
+
 .navElements{
     color: #fdfdff;
     font-size: 14px;
-    position: fixed;
     font-weight: 500;
-}
-
-#nav1{
-    left: 892px;
-    top: 20px;
-}
-#nav2{
-    left: 1010px;
-    top: 20px;
-}
-#nav3{
-    left: 1126px;
-    top: 20px;
-}
-#nav4{
-    left: 1272px;
-    top: 20px;
 }
 
 nav{
     position: fixed;
     left: 0;
     top: 0;
-    display: flex;
-    flex-wrap: wrap;
-    width: 1600px;
-    height: 0;
-    background-color: #484d52;
+    width: 100%;
+    height: 50px;
     z-index: 10;
 }
 
 #sec1{
-    width: 1600px;
     height: 720px;
     background-image: url("images/bg1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #sec2{
-    width: 1600px;
     height: 720px;
     background-color: #dfdfe1;
 }
@@ -225,9 +217,11 @@ nav{
 }
 
 #sec3{
-    width: 1600px;
     height: 720px;
     background-image: url("images/bg2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #teamTitle, #teamText, #lightboxTitle, #lightboxText{
@@ -319,7 +313,6 @@ nav{
 }
 
 #sec4{
-    width: 1600px;
     height: 720px;
     background-color: #161b20;
 
@@ -366,16 +359,13 @@ html {
 
 .modal {
     display: none;
-    position: relative;
+    position: absolute;
     z-index: 1;
-    padding: 10px 62px 0px 62px;
+    top: 2160px;
     left: 0;
-    top: -390px;
     width: 100%;
-    height: 100%;
+    height: 720px;
     overflow: auto;
-    max-width: 1600px;
-    max-height: 720px;
     background: rgba(0, 0, 0, 0.75);
 }
 
@@ -385,12 +375,10 @@ html {
     flex-direction: column;
     justify-content: center;
     margin: auto;
-    padding: 0 0 0 0;
-    width: 80%;
-    height: 80%;
-    max-width: 900px;
-    max-height: 450px;
-    top: 150px;
+    padding: 0;
+    width: 25%;
+    height: 25%;
+    top: 25%;
 }
 
 
@@ -401,15 +389,13 @@ html {
 }
 
 .image-slide {
-    max-width: 600px;
-    max-height: 400px;
+    width: 350px;
+    height: auto;
 }
 
 .modal-preview {
     width: 100%;
 }
-
-
 
 img.preview, img.modal-preview {
     opacity: 0.6;
@@ -430,14 +416,16 @@ img.hover-shadow {
 }
 
 .close {
-    position: absolute;
-    top: 30px;
-    left: 784px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    width: 50%;
+    max-width: 40px;
 }
 
 .close:hover,
 .close:focus {
-    color: #999;
     cursor: pointer;
 }
 
@@ -448,7 +436,6 @@ img.hover-shadow {
     top: 50%;
     width: auto;
     padding: 16px;
-    margin-top: -50px;
     color: white;
     font-weight: bold;
     font-size: 20px;
@@ -459,11 +446,10 @@ img.hover-shadow {
 }
 
 .next {
-    right: -300px;
-    border-radius: 3px 0 0 3px;
+    right: -25%;
 }
 .previous{
-    left: -300px;
+    left: -25%;
 }
 
 .previous:hover,
@@ -479,7 +465,6 @@ img.hover-shadow {
 }
 
 #sec5{
-    width: 1600px;
     height: 720px;
     background-color: #acb1b6;
 }
@@ -533,10 +518,7 @@ input::placeholder, textarea::placeholder{
 
 #messageInput{
     height: 175px;
-}
-#messageInput::placeholder{
-    position: relative;
-    top: 10px;
+    padding-top: 10px;
 }
 
 #submitInput{
@@ -550,7 +532,6 @@ input::placeholder, textarea::placeholder{
 }
 
 footer{
-    width: 1600px;
     height: 130px;
     background-color: #161b20;
 }
@@ -582,12 +563,7 @@ footer{
     font-size: 10px;
 }
 
-.mobile{
-    display: none;
-}
-.desktop{
-    display: block;
-}
+
 
 @media only screen and (max-width: 500px) {
     .desktop{

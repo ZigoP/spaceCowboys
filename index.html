@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
 
-    <title>Title</title>
+    <title>SpaceCowboys</title>
     <link rel="stylesheet" href="css.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 </head>
 <body>
     <nav id="navBar">
         <img id="spaceshipLogo" src="images/logo1.png" alt="spaceshipLogo">
         <div class="desktop">
-            <p id="nav1" class="montserratFont navElements" onclick="navClick(this.id)">ABOUT US</p>
-            <p id="nav2" class="montserratFont navElements" onclick="navClick(this.id)">THE TEAM</p>
-            <p id="nav3" class="montserratFont navElements" onclick="navClick(this.id)">IMPRESSIONS</p>
-            <p id="nav4" class="montserratFont navElements" onclick="navClick(this.id)">CONTACT</p>
+            <div class="navWrapper">
+                <p id="nav1" class="montserratFont navElements" onclick="navClick(this.id)">ABOUT US</p>
+                <p id="nav2" class="montserratFont navElements" onclick="navClick(this.id)">THE TEAM</p>
+                <p id="nav3" class="montserratFont navElements" onclick="navClick(this.id)">IMPRESSIONS</p>
+                <p id="nav4" class="montserratFont navElements" onclick="navClick(this.id)">CONTACT</p>
+            </div>
         </div>
         <div class="mobile">
             <button class="montserratFont dropdown" id="openMenu" onclick="menu(this.id)">Menu</button>

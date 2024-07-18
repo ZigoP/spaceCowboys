@@ -7,54 +7,41 @@ var sec3 = document.getElementById('sec3');
 var sec4 = document.getElementById('sec4');
 var sec5 = document.getElementById('sec5');
 
+const colorNavEl = (toColor) => {
+    nav1.style.color = "#fdfdff";
+    nav2.style.color = "#fdfdff";
+    nav3.style.color = "#fdfdff";
+    nav4.style.color = "#fdfdff";
+
+    toColor.style.color = "#ffdc08";
+}
+
 window.addEventListener("scroll", changeNavBg = () => {
     const nav = document.querySelector("#navBar");
-    nav.style.height = "50px";
+    nav.style.backgroundColor = "#484d52";
 
     var bounding2 = sec2.getBoundingClientRect();
     var bounding3 = sec3.getBoundingClientRect();
     var bounding4 = sec4.getBoundingClientRect();
-    var bounding5 = sec5.getBoundingClientRect();
 
-    if (bounding2.top >= -sec2.offsetHeight
-        && bounding2.left >= -sec2.offsetWidth
-        && bounding2.right <= (window.innerWidth || document.documentElement.clientWidth) + sec2.offsetWidth
-        && bounding2.bottom <= (window.innerHeight || document.documentElement.clientHeight) + sec2.offsetHeight){
+    if ((bounding2.top >= -sec2.offsetHeight + 10)
+        && (bounding2.bottom <= (window.innerHeight || document.documentElement.clientHeight) + sec2.offsetHeight + 10)){
 
-        nav1.style.color = "#ffdc08";
-        nav2.style.color = "#fdfdff";
-        nav3.style.color = "#fdfdff";
-        nav4.style.color = "#fdfdff";
+        colorNavEl(nav1);
     }
-    else if (bounding3.top >= -sec3.offsetHeight
-        && bounding3.left >= -sec3.offsetWidth
-        && bounding3.right <= (window.innerWidth || document.documentElement.clientWidth) + sec3.offsetWidth
-        && bounding3.bottom <= (window.innerHeight || document.documentElement.clientHeight) + sec3.offsetHeight){
+    else if ((bounding3.top >= -sec3.offsetHeight + 10)
+        && (bounding3.bottom <= (window.innerHeight || document.documentElement.clientHeight) + sec3.offsetHeight) + 10){
 
-        nav1.style.color = "#fdfdff";
-        nav2.style.color = "#ffdc08";
-        nav3.style.color = "#fdfdff";
-        nav4.style.color = "#fdfdff";
+        colorNavEl(nav2);
     }
-    else if (bounding4.top >= -sec4.offsetHeight
-        && bounding4.left >= -sec4.offsetWidth
-        && bounding4.right <= (window.innerWidth || document.documentElement.clientWidth) + sec4.offsetWidth
-        && bounding4.bottom <= (window.innerHeight || document.documentElement.clientHeight) + sec4.offsetHeight){
+    else if ((bounding4.top >= -sec4.offsetHeight + 10)
+        && (bounding4.bottom <= (window.innerHeight || document.documentElement.clientHeight) + sec4.offsetHeight) + 10){
 
-        nav1.style.color = "#fdfdff";
-        nav2.style.color = "#fdfdff";
-        nav3.style.color = "#ffdc08";
-        nav4.style.color = "#fdfdff";
+        colorNavEl(nav3);
     }
-    else if (bounding5.top >= -sec5.offsetHeight
-        && bounding5.left >= -sec5.offsetWidth
-        && bounding5.right <= (window.innerWidth || document.documentElement.clientWidth) + sec5.offsetWidth
-        && bounding5.bottom <= (window.innerHeight || document.documentElement.clientHeight) + sec5.offsetHeight){
+    else {
 
-        nav1.style.color = "#fdfdff";
-        nav2.style.color = "#fdfdff";
-        nav3.style.color = "#fdfdff";
-        nav4.style.color = "#ffdc08";
+        colorNavEl(nav4);
     }
 })
 
@@ -111,7 +98,7 @@ let slideIndex = 1;
 showSlide(slideIndex);
 
 function openLightbox() {
-    document.getElementById('Lightbox').style.display = 'block';
+    document.getElementById('Lightbox').style.display = 'inline';
 }
 
 function closeLightbox() {
